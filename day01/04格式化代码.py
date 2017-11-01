@@ -1,5 +1,6 @@
 # Author:Louis Chu
 #下面这段代码演示的是格式化输出
+#在这里 %s是占位符,在末尾添加 %（参数1，参数2）
 name = input("name:")
 age = input("age:")
 job = input("job")

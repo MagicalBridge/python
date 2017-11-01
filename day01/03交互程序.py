@@ -1,7 +1,7 @@
 # Author:Louis Chu
-#下面是一个交互程序,程序运行的时候需要输入用户名和密码
+# 下面是一个交互程序,程序运行的时候需要输入用户名和密码
 # 打印出用户名和密码；
-
+# 使用input的关键字启动交互的程序
 username = input("username:");
 password = input("password:");
 print(username,password);
