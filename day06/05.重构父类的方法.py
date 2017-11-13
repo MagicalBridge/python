@@ -1,10 +1,9 @@
 # Author:Louis Chu
-# 1.继承的时候分为深度优先和广度优先的为问题
-#   在py3中使用的是广度优先的过程
-#   在py2中旧式类使用的是深度优先
-#   在py2中新式类使用的广度优先的策略
 
-
+# 重构父类的方法
+#     如果在Man这个类里面定义一个sleep函数 会覆盖父类的sleep函数
+#     但是我想实现的功能是 先执行父类的方法 再执行子类的方法
+#     在子类中直接调用父类的方法 然后再执行自己的逻辑
 # 创建一个Person类
 class People:
     #初始化构造方法 初始化 姓名和年龄
@@ -26,15 +25,13 @@ class Man(People):
    #定义自己的方法 piao
     def piao(self):
         print("%s is piaoing……20s……done"%(self.name))
-
-
-
+    def sleep(self):
+        People.sleep(self)  # 这里的self 是m1
+        print("man is sleep")
 
 #实例化对象传入两个参数 必填否则会报错;
 m1 = Man("牛韩阳","22")
 #执行eat方法;
 m1.eat()
 m1.piao()
-
-
-
+m1.sleep() # 牛韩阳 is sleep

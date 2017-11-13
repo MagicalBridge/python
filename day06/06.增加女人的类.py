@@ -1,10 +1,8 @@
 # Author:Louis Chu
-# 1.继承的时候分为深度优先和广度优先的为问题
-#   在py3中使用的是广度优先的过程
-#   在py2中旧式类使用的是深度优先
-#   在py2中新式类使用的广度优先的策略
 
-
+# 创建一个新的类
+# Women 同样的是继承的People的属性
+# 添加 born 方法 women 不能调用man 里面的功能
 # 创建一个Person类
 class People:
     #初始化构造方法 初始化 姓名和年龄
@@ -26,15 +24,26 @@ class Man(People):
    #定义自己的方法 piao
     def piao(self):
         print("%s is piaoing……20s……done"%(self.name))
+    def sleep(self):
+        People.sleep(self)  # 这里的self 是m1
+        print("man is sleep")
+
+        # 创建Woman 这个类 继承People
 
 
-
+class Woman(People):
+    # 定义生孩子方法
+    def born(self):
+        print("%s is born a baby……" % (self.name))
 
 #实例化对象传入两个参数 必填否则会报错;
 m1 = Man("牛韩阳","22")
 #执行eat方法;
 m1.eat()
 m1.piao()
+m1.sleep() # 牛韩阳 is sleep
 
 
-
+#实例化 women对象
+w1 = Woman("陈荣华","22")
+w1.born()
