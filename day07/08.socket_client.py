@@ -1,4 +1,4 @@
-__author__ = "Alex Li"
+
 #客户端
 import socket
 

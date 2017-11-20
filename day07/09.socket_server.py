@@ -1,4 +1,3 @@
-__author__ = "Alex Li"
 
 #-*-coding:utf-8-*-
 #服务器端
