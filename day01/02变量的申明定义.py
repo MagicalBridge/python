@@ -4,11 +4,11 @@
 #1.什么是变量
 #2.变量的命名规则
 #3.常量的命名规则
-name = "louis";
+name = "louis"; #py中声明变量不需要关键字声明
 print("我的名字是",name); #我的名字是 louis
 
-name2 = name;
-name = "paoche ge";
+name2 = name; #将louis 这个变量赋值给name2
+name = "paoche ge"; #重新赋值name ="paoche ge"
 
 print(name,name2); #paoche ge louis
 
