@@ -20,6 +20,7 @@ while True:
         print("before send",len(cmd_res))
         if  len(cmd_res) == 0:
             cmd_res = "cmd has no output..."
+        conn.send(str(len(cmd_res.encode())).encode("utf-8")) #首先发送大小个客户端 数字是不能直接转码的  需要先进行变成字符串然后再进行转码
         conn.send(cmd_res.encode("utf-8")) # 这里发送客户端还需要 encode 编程byte 类型;
         print("send done")
 
