@@ -1,0 +1,32 @@
+静态方法
+    与类无关 不能访问类里面的任何属性和方法
+类方法
+    只能访问类变量
+属性@property
+    把一个方法变成一个静态属性
+反射
+    getattr(obj,str)
+    setattr(obj,str,val)
+    hasattr(obj,str)
+    delattr(obj,str)
+socket
+    tcp/ip  udp send recv
+    这种协议被socket 封装起来了我们不需要关注底层的
+    分包之类的操作 需要做的就是变成了 send recv 这样的动作
+
+    服务端:socket
+    server = socket.socket(); 默认不传参数时候 启动socket服务
+    server.bind(localhost,9999) 绑定端口号
+    server.listen(); 监听一下端口
+    coon 每进来一个链接都开启一个实例
+    conn addr = server.accept() 接收两个参数 #处于阻塞的状态
+    conn.recv(1024) 每一个实例  都可以接收响应的数据 recv 默认是一个阻塞的状态
+    里面传入的数据最好不要超过 8192  大概是在  8k左右的数据
+    print(data)  打印这个数据
+    conn.send(data.upper())  将数据变成大写之后再发出去
+
+
+
+
+
+
