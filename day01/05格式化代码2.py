@@ -2,19 +2,19 @@
 # 下面这段代码演示的是格式化输出
 
 
-# name = input("name:")
-# age = input("age:")
-# job = input("job")
-# salary = input("salary")
-#
-# infor = '''-------infor of %s-------
-# Name:%s;
-# age:%d;
-# job:%s:
-# salary:%s;
-# ''' % (name, name, age, job, salary)
-#
-# print(infor)
+name = input("name:")
+age = input("age:")
+job = input("job")
+salary = input("salary")
+
+infor = '''-------infor of %s-------
+Name:%s;
+age:%d;
+job:%s:
+salary:%s;
+''' % (name, name, age, job, salary)
+
+print(infor)
 
 # 上面的代码中 我将%s 换成%d 程序编译报错
 # 这样输出之后#%d format: a number is required, not str
