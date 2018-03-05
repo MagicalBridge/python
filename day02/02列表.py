@@ -71,3 +71,35 @@ print(names)
 name2 = [1, 2, 3, 4]
 names.extend(name2)
 print(names)  # ['chenronghua', 'xiangpeng', 'xuliangchen', 'xuliangchen', 'zhangyang', 1, 2, 3, 4]
+
+# 列表执行 copy 方法
+playList = ['football', 'pingpong', 'basketball']
+# 将playList 复制一份
+playList2 = playList.copy()
+
+print(playList)
+print(playList2)
+playList2[1] = '羽毛球'
+print(playList2)
+
+# 打印两个列表的值。
+# ['football', 'pingpong', 'basketball']
+# ['football', 'pingpong', 'basketball']
+# ['football', '羽毛球', 'basketball']
+
+# 切片的高级版本步长切片
+list = [1, 2, 3, 4, 5, 6]
+# 切片的时候, 0 代表起始的位置 ，-1 代表结束的位置 :2d代表步长
+print(list[0:-1:2])  # [1, 3, 5]
+# 由于 0 和-1 是可以省略不写的因此,可以简写成如下的形式
+print(list[:2])  # [1, 3, 5]
+
+# 浅copy的三种实现形式
+# 我们首先需要引入copy 模块
+import copy
+
+person = ['name', ['louis', 23]]
+
+p1 = copy.copy(person)
+p2 = person[:]  # 完全切片
+p3 = list(person) # 采用工厂函数的形式
